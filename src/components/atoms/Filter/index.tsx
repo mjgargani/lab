@@ -2,7 +2,7 @@ import randomId from '../../../utils/randomId';
 import Button from '../Button';
 import { Container, FilterBox } from './styles';
 import { type FilterProps } from './types';
-import IconReplacer from '@/components/molecules/IconReplacer';
+import IconReplacer from '@/components/atoms/Icon';
 import React, { useState, type PropsWithChildren } from 'react';
 import { BsFilter } from 'react-icons/bs';
 import { FaEyeSlash } from 'react-icons/fa';

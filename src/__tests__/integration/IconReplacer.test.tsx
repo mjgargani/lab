@@ -1,4 +1,4 @@
-import IconReplacer from '../../components/molecules/IconReplacer';
+import IconReplacer from '../../components/atoms/Icon';
 import repos from '../mock/repos.json';
 import { render } from '../utils/render';
 import { cleanup, screen } from '@testing-library/react';

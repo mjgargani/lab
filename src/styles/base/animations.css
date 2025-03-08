@@ -1,0 +1,157 @@
+@keyframes bgMove {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes bgRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes potionRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(120deg);
+  }
+
+  60% {
+    transform: rotate(240deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes potionMove {
+  0% {
+    left: 25vw;
+    top: 10vh;
+  }
+
+  8% {
+    left: 35vw;
+    top: 15vh;
+  }
+
+  16% {
+    left: 40vw;
+    top: 20vh;
+  }
+
+  24% {
+    left: 30vw;
+    top: 25vh;
+  }
+
+  32% {
+    left: 20vw;
+    top: 30vh;
+  }
+
+  40% {
+    left: 10vw;
+    top: 35vh;
+  }
+
+  48% {
+    left: 20vw;
+    top: 40vh;
+  }
+
+  56% {
+    left: 30vw;
+    top: 35vh;
+  }
+
+  64% {
+    left: 40vw;
+    top: 30vh;
+  }
+
+  72% {
+    left: 30vw;
+    top: 25vh;
+  }
+
+  80% {
+    left: 20vw;
+    top: 20vh;
+  }
+
+  88% {
+    left: 15vw;
+    top: 15vh;
+  }
+
+  96% {
+    left: 20vw;
+    top: 11vh;
+  }
+
+  100% {
+    left: 25vw;
+    top: 10vh;
+  }
+}
+
+@keyframes potionShining {
+  0% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, .75));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, .25));
+  }
+}
+
+
+.animate-bgMove {
+  animation: bgMove 60s ease infinite;
+}
+
+.animate-bgRotate {
+  animation: bgRotate 5s linear infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeInOut .5s ease forwards;
+}
+
+.animate-potion {
+  animation: potionRotate 60s infinite alternate ease-in-out,
+    potionMove 120s infinite ease-in-out,
+    potionShining 5s infinite alternate ease-in-out;
+}

@@ -1,0 +1,33 @@
+.frame,
+.frame__wrapper,
+.frame__tiles,
+.frame__shadow,
+.frame__potion {
+  @apply fixed w-full h-full overflow-hidden pointer-events-none transition-all duration-500;
+}
+
+.frame__wrapper {
+  background-position: 0% 0%;
+  width: 600vw;
+  height: 600vh;
+  top: -250vh;
+  left: -250vw;
+}
+
+.frame__tiles {
+  background-size: 10vh;
+}
+
+.frame__shadow {
+  background: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 200%);
+}
+
+.frame__potion {
+  top: calc(50% - 25vh);
+  left: calc(50% - 25vw);
+  width: 50vw;
+  height: 50vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

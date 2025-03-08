@@ -1,5 +1,5 @@
 import randomId from '../../../utils/randomId';
-import IconReplacer from '../IconReplacer';
+import IconReplacer from '../../atoms/Icon';
 import { Container, Title } from './styles';
 import { type CardTitleProps } from './types';
 import React, { type PropsWithChildren } from 'react';

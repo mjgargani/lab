@@ -1,32 +1,20 @@
-import { type CommonProps } from '../../../globals';
-import randomId from '../../../utils/randomId';
-import IconReplacer from '../IconReplacer';
-import { Container } from './styles';
+import Icon from '../../atoms/Icon';
 import React from 'react';
-import { css } from 'styled-components';
 
-const FooterInfo: React.FC<CommonProps> = ({ dataTestId = randomId('footer-info'), styledCss }) => (
-  <Container data-testid={dataTestId} styledCss={styledCss}>
-    <p>
-      <span style={{ fontFamily: 'mjgarganis Lab', color: '#E9E9FC' }}></span> {new Date().getFullYear()}; Este
-      portfólio foi feito com{' '}
-      <IconReplacer
-        styledCss={css`
-          line-height: 80%;
-        `}
-        brighter={true}
-        text="nodejs-typescript-vite-reactjs-styledcomp"
-      />{' '}
-      e{' '}
-      <IconReplacer
-        styledCss={css`
-          line-height: 80%;
-        `}
-        brighter={true}
-        text="heart"
-      />
-    </p>
-  </Container>
+const FooterInfo: React.FC = () => (
+  <p className="text-center opacity-75">
+    <Icon
+      i="potion"
+    /> {new Date().getFullYear()}; Este
+    portfólio foi feito com{' '}
+    <Icon
+      i={["nodejs","typescript","vite","reactjs","styledcomp"]}
+    />{' '}
+    e{' '}
+    <Icon
+      i="heart"
+    />
+  </p>
 );
 
 export default FooterInfo;

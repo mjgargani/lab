@@ -1,5 +1,5 @@
 import randomId from '../../../utils/randomId';
-import IconReplacer from '../../molecules/IconReplacer';
+import IconReplacer from '../Icon';
 import { Container, HomePage, IsNew, IsPinned, Stars, Watchers } from './styles';
 import { type CardThumbnailProps } from './types';
 import React from 'react';

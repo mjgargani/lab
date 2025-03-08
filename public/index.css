@@ -1,6 +1,6 @@
 @font-face {
   font-family: "mjgarganis Lab";
-  src: url(./mjgarganis_lab.woff) format('woff2');
+  src: url(./fonts/mjgarganis_lab.woff) format('woff2');
 }
 
 @font-face {
@@ -24,13 +24,13 @@ body {
   font-family: sans-serif;
 }
 
-@media  (orientation: landscape) {
+@media (orientation: landscape) {
   body {
     font-size: calc(.1rem + 1vw);
   }
 }
 
-@media  (orientation: portrait) {
+@media (orientation: portrait) {
   body {
     font-size: calc(.1rem + 1vh);
   }

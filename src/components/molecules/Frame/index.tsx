@@ -1,22 +1,24 @@
-import { GitHubDataContext } from '../../../context/GitHubData';
-import bgMov from '../../../styles/utils/bgMov';
-import randomId from '../../../utils/randomId';
-import Potion from '../../atoms/Potion';
-import { Container, Shadow, Tiles } from './styles';
-import { type FrameProps } from './types';
+// import { GitHubDataContext } from '../../../context/GitHubData';
+// import bgMov from '../../../styles/utils/bgMov';
+// import Potion from '../../atoms/Potion';
+// import { Container, Shadow, Tiles } from './styles';
 import React, { useContext, useMemo } from 'react';
+import FrameWrapper from './wrapper';
+import FrameTiles from './tiles';
+import FrameShadow from './shadow';
+import FramePotion from './potion';
+import styles from './Frame.module.css';
 
-const Frame: React.FC<FrameProps> = ({ dataTestId = randomId('frame'), styledCss, page, prevPage = '/' }) => {
-  const { loading } = useContext(GitHubDataContext);
-  const calcBgMov = useMemo(bgMov, []);
+const Frame: React.FC = () => {
+  // const { loading } = useContext(GitHubDataContext);
+  // const calcBgMov = useMemo(bgMov, []);
 
-  return (
-    <Container data-testid={dataTestId} styledCss={styledCss} page={page} bgMov={calcBgMov}>
-      <Tiles data-testid={randomId('frame-tiles')} bgMov={calcBgMov} />
-      <Shadow data-testid={randomId('frame-shadow')} page={page} prevPage={prevPage} />
-      {!loading && <Potion dataTestId={randomId('frame-potion')} transparent={page !== '/'} />}
-    </Container>
-  );
+  return (<div className={styles.frame}>
+    <FrameWrapper />
+    <FrameTiles />
+    <FrameShadow />
+    <FramePotion />
+  </ div>);
 };
 
 export default Frame;

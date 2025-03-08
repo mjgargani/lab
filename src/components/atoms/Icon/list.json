@@ -1,0 +1,218 @@
+[
+  {
+    "alias": "archive",
+    "name": "Archive Projects",
+    "color": "#575100",
+    "class": "fa-solid fa-box-archive"
+  },
+  {
+    "alias": "construct",
+    "name": "Scirra's Construct",
+    "color": "#96aab9",
+    "class": "fa-solid fa-gamepad"
+  },
+  {
+    "alias": "django",
+    "name": "Django Framework",
+    "color": "#000",
+    "class": "fa-brands fa-python"
+  },
+  {
+    "alias": "docker",
+    "name": "Docker",
+    "color": "#0997e5",
+    "class": "fa-brands fa-docker"
+  },
+  {
+    "alias": "email",
+    "name": "Email",
+    "color": "#000",
+    "class": "fa-solid fa-envelope"
+  },
+  {
+    "alias": "elixir",
+    "name": "Elixir",
+    "color": "#70557d",
+    "class": "fa-slid fa-droplet"
+  },
+  {
+    "alias": "extlink",
+    "name": "External Link",
+    "color": "#FFF",
+    "class": "fa-solid fa-arrow-up-right-from-square"
+  },
+  {
+    "alias": "express",
+    "name": "Express Framework",
+    "color": "#237400",
+    "class": "fa-solid fa-network-wired"
+  },
+  {
+    "alias": "eye",
+    "name": "View",
+    "color": "#FFF",
+    "class": "fa-solid fa-eye"
+  },
+  {
+    "alias": "github",
+    "name": "GitHub",
+    "color": "#000",
+    "class": "fa-brands fa-git-alt"
+  },
+  {
+    "alias": "ghactions",
+    "name": "GitHub Actions",
+    "color": "#505050",
+    "class": "fa-brands fa-github"
+  },
+  {
+    "alias": "globe",
+    "name": "Website",
+    "color": "#FFF",
+    "class": "fa-solid fa-globe"
+  },
+  {
+    "alias": "gtranslate",
+    "name": "Google Translate",
+    "color": "#4B8BF5",
+    "class": "fa-solid fa-language"
+  },
+  {
+    "alias": "heart",
+    "name": "Heart",
+    "color": "#F75341",
+    "class": "fa-solid fa-heart"
+  },
+  {
+    "alias": "javascript",
+    "name": "JavaScript",
+    "color": "#2F74C0",
+    "class": "fa-brands fa-js"
+  },
+  {
+    "alias": "jest",
+    "name": "Jest",
+    "color": "#C03B18",
+    "class": "fa-brands fa-js"
+  },
+  {
+    "alias": "lrn",
+    "name": "Learning",
+    "color": "#48c018",
+    "class": "fa-solid fa-book"
+  },
+  {
+    "alias": "linkedin",
+    "name": "LinkedIn",
+    "color": "#0A66C2",
+    "class": "fa-brands fa-linkedin"
+  },
+  {
+    "alias": "new",
+    "name": "New",
+    "color": "#e6ff82",
+    "class": "fa-solid fa-star-of-life"
+  },
+  {
+    "alias": "nodejs",
+    "name": "Node.js",
+    "color": "#7CB73F",
+    "class": "fa-brands fa-node-js"
+  },
+  {
+    "alias": "potion",
+    "name": "Potion",
+    "color": "#38BDF8",
+    "class": "fa-solid fa-flask"
+  },
+  {
+    "alias": "php",
+    "name": "PHP",
+    "color": "#4D588E",
+    "class": "fa-brands fa-php"
+  },
+  {
+    "alias": "pin",
+    "name": "Pinned",
+    "color": "#FFF",
+    "class": "fa-solid fa-thumbtack"
+  },
+  {
+    "alias": "preact",
+    "name": "Preact",
+    "color": "#673AB8",
+    "class": "fa-brands fa-react"
+  },
+  {
+    "alias": "python",
+    "name": "Python",
+    "color": "#EEC855",
+    "class": "fa-brands fa-python"
+  },
+  {
+    "alias": "puppeteer",
+    "name": "Puppeteer",
+    "color": "#00d7a1",
+    "class": "fa-solid fa-robot"
+  },
+  {
+    "alias": "reactjs",
+    "name": "React.js",
+    "color": "#5ED3F3",
+    "class": "fa-brands fa-react"
+  },
+  {
+    "alias": "rocketseat",
+    "name": "Rocketseat",
+    "color": "#8257e6",
+    "class": "fa-brands fa-rocket"
+  },
+  {
+    "alias": "socketio",
+    "name": "Socket.io",
+    "color": "#505050",
+    "class": "fa-solid fa-network-wired"
+  },
+  {
+    "alias": "star",
+    "name": "Star",
+    "color": "#e6ff82",
+    "class": "fa-solid fa-star"
+  },
+  {
+    "alias": "styledcomp",
+    "name": "Styled Components",
+    "color": "#EC75C4",
+    "class": "fa-brands fa-css"
+  },
+  {
+    "alias": "tailwind",
+    "name": "Tailwind CSS Framework",
+    "color": "#38BDF8",
+    "class": "fa-brands fa-css"
+  },
+  {
+    "alias": "typescript",
+    "name": "TypeScript",
+    "color": "#2F74C0",
+    "class": "fa-brands fa-js"
+  },
+  {
+    "alias": "vite",
+    "name": "Vite",
+    "color": "#754afb",
+    "class": "fa-brands fa-js"
+  },
+  {
+    "alias": "vitest",
+    "name": "Vite Test",
+    "color": "#729b1b",
+    "class": "fa-brands fa-js"
+  },
+  {
+    "alias": "wordpress",
+    "name": "WordPress",
+    "color": "#21759B",
+    "class": "fa-brands fa-wordpress"
+  }
+]

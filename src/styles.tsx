@@ -5,20 +5,6 @@ type ContainerBaseProps = {
   isLoading?: boolean;
 };
 
-export const ContainerBase = styled.div<ContainerBaseProps>`
-  position: absolute;
-  padding: 0;
-  ${(props) => props.isLoading && 'cursor: wait;'}
-
-  height: 100%;
-  width: 80%;
-  margin: 0 10%;
-  @media ${device.tablet} {
-    width: 70%;
-    margin: 0 15%;
-  }
-`;
-
 export const ContainerTop = styled.div`
   overflow: hidden;
   position: relative;

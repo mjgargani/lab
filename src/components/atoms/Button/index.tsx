@@ -1,22 +1,22 @@
-import randomId from '../../../utils/randomId';
-import { Container } from './styles';
-import { type ButtonProps } from './types';
-import React, { type PropsWithChildren } from 'react';
+import React from 'react';
 
-const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
-  dataTestId = randomId('button'),
-  active = false,
-  onClick,
-  icon,
-  styledCss,
-  children,
-}) => (
-  <Container data-testid={dataTestId} onClick={onClick} active={active} styledCss={styledCss}>
-    <h2>
-      <span>{icon}</span>
+interface ButtonProps {
+  active?: boolean;
+  onClick: () => void;
+  className?: string;
+  children: React.ReactNode;
+}
+
+const Button: React.FC<ButtonProps> = ({ active = false, onClick, className, children }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`${className} w-full md:w-auto py-2 px-4 text-center rounded-md transition-colors duration-300 cursor-pointer
+        ${active ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-blue-400 hover:text-white'}`}
+    >
       {children}
-    </h2>
-  </Container>
-);
+    </button>
+  );
+};
 
 export default Button;

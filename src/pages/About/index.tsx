@@ -5,7 +5,7 @@ import GridCell from '../../components/atoms/GridCell';
 import GridContainer from '../../components/atoms/GridContainer';
 import Loading from '../../components/atoms/Loading';
 import Card from '../../components/molecules/Card';
-import IconReplacer from '../../components/molecules/IconReplacer';
+import IconReplacer from '../../components/atoms/Icon';
 import Page from '../../components/templates/Page';
 import { GitHubDataContext } from '../../context/GitHubData';
 import { type CommonProps } from '../../globals';
