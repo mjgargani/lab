@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/naming-convention */
+ 
 import useLocalStorage from '../hooks/useLocalStorage';
 import { gitHubRequest, pinnedRepos } from '../utils/fetch';
 import { type TechDetail, type GitHubData, type GitHubProfile, type GitHubRepoItem } from './types';

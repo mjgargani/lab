@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/naming-convention */
+ 
 import { type AlphaRange, type PageEndPoints } from '../../globals';
 
 export type PotionStyles = {

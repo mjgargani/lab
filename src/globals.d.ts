@@ -1,6 +1,6 @@
 import { type FlattenInterpolation } from 'styled-components';
 
-/* eslint-disable @typescript-eslint/naming-convention */
+ 
 type RGB = `rgb(${number} | ${number}, ${number})`;
 type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
 type HEX = `#${string}`;

@@ -1,4 +1,4 @@
-import camelcase from 'camelcase';
+import { toCamelCase } from '../utils/stringFormatter';
 import { useEffect, useState } from 'react';
 
 type GenericObject = Record<string, unknown>;
@@ -19,7 +19,7 @@ function useLocalStorage<T>(): T | false {
           item = value;
         }
 
-        newData = Object.assign(newData, { [camelcase(key)]: item });
+        newData = Object.assign(newData, { [toCamelCase(key)]: item });
       });
 
       setData(newData);

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/naming-convention */
+ 
 import { type GitHubRepoItem } from '../context/types';
 import { StatusCodes } from 'http-status-codes';
 

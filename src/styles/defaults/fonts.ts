@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/naming-convention */
+ 
 import { device, size } from '../../utils/devices';
 import commonStyles from './common';
 import { createGlobalStyle } from 'styled-components';
