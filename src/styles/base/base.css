@@ -1,11 +1,9 @@
 @layer base {
   h1 {
     font-family: "mjgarganis Lab", monospace, sans-serif;
-    @apply text-3xl md:text-4xl font-bold;
   }
 
   h2 {
     font-family: "Sono", monospace, sans-serif;
-    @apply text-2xl font-semibold;
   }
 }

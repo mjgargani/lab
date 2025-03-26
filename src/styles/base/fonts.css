@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "mjgarganis Lab", "Sono", monospace, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: "mjgarganis Lab";
+  font-style: bold;
+  font-weight: 600;
   src: url(/fonts/mjgarganis_lab.woff2) format('woff2');
   font-display: swap;
 }

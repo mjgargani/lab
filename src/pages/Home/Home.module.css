@@ -1,0 +1,9 @@
+.logo {
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.5px;
+  text-shadow: -0.5px -0.5px 0 #fff, 0.5px 0.5px 0 #fff, 1px 1px 0 #fff, 1.5px 1.5px 0 #fff;
+}
+
+.logo>span {
+  color: darkblue;
+}

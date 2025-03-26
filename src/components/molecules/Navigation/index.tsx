@@ -8,7 +8,7 @@ const Navigation: React.FC = () => {
   const page = '/'; // Mock
 
   return (
-    <div className="flex flex-col md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4 mx-4 md:mx-auto">
+    <div className="flex flex-col md:w-max md:flex-row justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4 mx-4 md:mx-auto">
       <Button
         active={page === '/'}
         onClick={() => navigate('')}

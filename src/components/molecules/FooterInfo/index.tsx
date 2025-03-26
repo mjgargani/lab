@@ -8,7 +8,7 @@ const FooterInfo: React.FC = () => (
     /> {new Date().getFullYear()}; Este
     portfólio foi feito com{' '}
     <Icon
-      i={["nodejs","typescript","vite","reactjs","styledcomp"]}
+      i={["nodejs","typescript","vite","reactjs","tailwind"]}
     />{' '}
     e{' '}
     <Icon

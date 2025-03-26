@@ -189,7 +189,7 @@
     "alias": "tailwind",
     "name": "Tailwind CSS Framework",
     "color": "#38BDF8",
-    "class": "fa-brands fa-css"
+    "class": "fa-solid fa-wind"
   },
   {
     "alias": "typescript",
@@ -201,7 +201,7 @@
     "alias": "vite",
     "name": "Vite",
     "color": "#754afb",
-    "class": "fa-brands fa-js"
+    "class": "fa-solid fa-play fa-rotate-90"
   },
   {
     "alias": "vitest",
