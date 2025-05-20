@@ -1,4 +1,4 @@
-[attempted-ethical-use-of-ai](https://chatgpt.com/share/682bef9e-8264-8013-8218-0b3a0e8f4822)
+[ai-usage](https://chatgpt.com/share/682cb956-bb94-8013-9281-c0b9aeace9dd)
 
 ⚠️ Disclaimer: Está se tornando extremamente difícil provar que um conteúdo [não é gerado por IA](https://veja.abril.com.br/tecnologia/ia-se-passou-por-humano-no-teste-de-turing-o-que-isso-significa/). A OpenAI provê um "compartilhamento", que já ajuda muito. Aqui, faço uma mea-culpa, pq devido ao pouco tempo e estafa mental, eu uso a IA pra me ajudar a produzir, trago essa problemática em: [https://github.com/mjgargani/infra-seed](https://github.com/mjgargani/infra-seed)
 
