@@ -32,7 +32,7 @@ const Filter: React.FC<PropsWithChildren<FilterProps>> = ({
           id="all"
           value="all"
           onCheckedChange={(checked) => {
-            const ev = { target: { name: 'all', value: 'all', checked } } as any;
+            const ev = { target: { name: 'all', value: 'all', checked } } as unknown as React.ChangeEvent<HTMLInputElement>;
             handleFilter(ev);
           }}
           checked={!filters.some((el) => !el.selected)}
@@ -48,7 +48,7 @@ const Filter: React.FC<PropsWithChildren<FilterProps>> = ({
             value={el.name}
             checked={el.selected}
             onCheckedChange={(checked) => {
-               const ev = { target: { name: el.name, value: el.name, checked } } as any;
+               const ev = { target: { name: el.name, value: el.name, checked } } as unknown as React.ChangeEvent<HTMLInputElement>;
                handleFilter(ev);
             }}
           />

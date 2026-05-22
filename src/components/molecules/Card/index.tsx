@@ -3,7 +3,6 @@ import randomId from '@/shared/utils/randomId';
 import { type CardProps } from './types';
 import React from 'react';
 import mdParser from '@/shared/utils/mdParser';
-import { Card as ShadcnCard, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 const Card: React.FC<CardProps> = ({
   dataTestId = randomId('card'),

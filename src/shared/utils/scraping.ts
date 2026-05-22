@@ -15,8 +15,8 @@ async function getNewEtag(url: string): Promise<string | null> {
     const etag = response.headers.etag || null;
     localStorage.setItem('etag', etag);
     return etag;
-  } catch (error: any) {
-    console.error(error.message);
+  } catch (error: unknown) {
+    console.error((error as Error).message);
     return null;
   }
 }
@@ -26,13 +26,13 @@ async function getHtml(url: string): Promise<string | false> {
     const response = await axios.get(url);
     const { data } = response;
     return data as string;
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Erro ao buscar HTML:', error.message);
     return false;
   }
 }
 
-async function getPinned(): Promise<any[]> {
+async function getPinned(): Promise<unknown[]> {
   const html = await getHtml(github);
   if (!html) return [];
   const $ = cheerio.load(html);
@@ -52,13 +52,13 @@ async function getEtagCache(url: string): Promise<boolean> {
   return localEtag === remoteEtag;
 }
 
-function getRepoCache(): any[] {
+function getRepoCache(): unknown[] {
   const localCache = localStorage.getItem('repositories');
   if (!localCache) return [];
   return JSON.parse(localCache);
 }
 
-export async function getRepositories(): Promise<any[]> {
+export async function getRepositories(): Promise<unknown[]> {
   if (await getEtagCache(github)) {
     return getRepoCache()
   }
@@ -67,7 +67,7 @@ export async function getRepositories(): Promise<any[]> {
   const html = await getHtml(reposUrl);
   if (!html) return [];
   const $ = cheerio.load(html);
-  const repositories: any[] = [];
+  const repositories: unknown[] = [];
   const pinned = await getPinned();
 
   $('li.public').each((_i, el) => {
@@ -92,9 +92,9 @@ export async function getRepositories(): Promise<any[]> {
   return repositories;
 }
 
-export async function getRepositoriesOrdered(): Promise<any[]> {
+export async function getRepositoriesOrdered(): Promise<unknown[]> {
   const repositories = await getRepositories();
-  return repositories.sort((a, b) => {
+  return repositories.sort((a: Record<string, unknown>, b: Record<string, unknown>) => {
     if (a.pinned && !b.pinned) return -1;
     if (!a.pinned && b.pinned) return 1;
     if (a.updated && b.updated) return b.updated.localeCompare(a.updated);

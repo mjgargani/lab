@@ -10,7 +10,7 @@ export type PageEndPoints = '/' | '/projects' | '/about';
 
 export type CommonProps = {
   dataTestId?: string;
-  styledCss?: FlattenInterpolation<ThemeProps<any>> | false;
+  styledCss?: FlattenInterpolation<unknown> | false;
 };
 
 export type AlphaRange =

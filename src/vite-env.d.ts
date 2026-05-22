@@ -3,7 +3,6 @@ import { type ButtonStyles } from './styles/defaults/button';
 import { type CommonStyles } from './styles/defaults/common';
 import { type FrameStyles } from './styles/defaults/frame';
 import { type PotionStyles } from './styles/defaults/potion';
-import { type FlattenInterpolation, type ThemeProps } from 'styled-components';
 
 declare module '*.png';
 declare module '*.webp';

@@ -5,7 +5,7 @@ global.fetch = vi.fn();
 
 describe('GitHub API model', () => {
   it('fetchProfile calls correct url', async () => {
-    (global.fetch as any).mockResolvedValue({
+    (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
       ok: true,
       json: async () => ({ name: 'Test' }),
     });
@@ -16,7 +16,7 @@ describe('GitHub API model', () => {
   });
 
   it('fetchRepos calls correct url', async () => {
-    (global.fetch as any).mockResolvedValue({
+    (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
       ok: true,
       json: async () => ([{ name: 'Repo1' }]),
     });

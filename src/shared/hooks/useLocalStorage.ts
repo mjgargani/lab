@@ -15,7 +15,7 @@ function useLocalStorage<T>(): T | false {
 
         try {
           item = JSON.parse(value) as GenericObject;
-        } catch (error) {
+                } catch {
           item = value;
         }
 

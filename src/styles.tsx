@@ -1,9 +1,5 @@
-import { device } from @/shared/utils/devices';
-import styled from 'styled-components';
-
-type ContainerBaseProps = {
-  isLoading?: boolean;
-};
+import { device } from "@/shared/utils/devices";
+import styled from "styled-components";
 
 export const ContainerTop = styled.div`
   overflow: hidden;
