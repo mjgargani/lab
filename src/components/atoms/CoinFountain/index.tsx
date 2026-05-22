@@ -1,5 +1,5 @@
-import { Coin, Container, MoneyBag } from './styles';
-import React from 'react';
+import { Coin, Container, MoneyBag } from "./styles";
+import React from "react";
 
 const CoinFountain: React.FC = () => (
   <Container>

@@ -1,4 +1,4 @@
-import { type CommonProps, type PageEndPoints } from '../../../globals';
+import { type CommonProps, type PageEndPoints } from "../../../globals";
 
 export type NavigationProps = {
   isHome?: boolean;

@@ -1,14 +1,18 @@
 @font-face {
   font-family: "mjgarganis Lab";
-  src: url(./fonts/mjgarganis_lab.woff) format('woff2');
+  src: url(./fonts/mjgarganis_lab.woff) format("woff2");
 }
 
 @font-face {
-  font-family: 'Sono';
+  font-family: "Sono";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/sono/v1/aFT97PNiY3U2Cqf_aYEN64CYaK18YWJEsV6u-QLiOsxVtkWtFX55.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/sono/v1/aFT97PNiY3U2Cqf_aYEN64CYaK18YWJEsV6u-QLiOsxVtkWtFX55.woff2)
+    format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
+    U+FFFD;
 }
 
 html,
@@ -26,13 +30,13 @@ body {
 
 @media (orientation: landscape) {
   body {
-    font-size: calc(.1rem + 1vw);
+    font-size: calc(0.1rem + 1vw);
   }
 }
 
 @media (orientation: portrait) {
   body {
-    font-size: calc(.1rem + 1vh);
+    font-size: calc(0.1rem + 1vh);
   }
 }
 
@@ -56,10 +60,10 @@ body {
 
 @keyframes rotatePotion {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
