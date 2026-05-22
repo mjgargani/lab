@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router-dom';
-import randomId from '../../../utils/randomId';
+import { useLocation } from '@tanstack/react-router';
+import randomId from '@/shared/utils/randomId';
 import styles from './Frame.module.css';
 
 export type pages = '/' | '/projects' | '/about';

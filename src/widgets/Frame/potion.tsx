@@ -1,8 +1,8 @@
 import React from 'react';
-import potion from '../../../assets/potion.webp';
-import randomId from '../../../utils/randomId';
+import potion from '@/shared/assets/potion.webp';
+import randomId from '@/shared/utils/randomId';
 import styles from './Frame.module.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from '@tanstack/react-router';
 import { pages } from './wrapper';
 
 const FramePotion: React.FC = () => {

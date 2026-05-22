@@ -1,6 +1,6 @@
 import React from 'react';
-import tile from '../../../assets/tile.webp';
-import randomId from '@/utils/randomId';
+import tile from '@/shared/assets/tile.webp';
+import randomId from '@/shared/utils/randomId';
 import styles from './Frame.module.css';
 
 const FrameTiles: React.FC = () => {

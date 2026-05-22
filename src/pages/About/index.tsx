@@ -1,13 +1,13 @@
-import { GitHubDataContext } from '@/context/GitHubData';
 import { type CommonProps } from '../../globals';
-import randomId from '../../utils/randomId';
-import React, { useContext } from 'react';
-import mdParser from '@/utils/mdParser';
+import randomId from '@/shared/utils/randomId';
+import React from 'react';
+import mdParser from '@/shared/utils/mdParser';
 import Button from '@/components/atoms/Button';
-import { handleExtLink } from '@/utils/handleExtLink';
+import { handleExtLink } from '@/shared/utils/handleExtLink';
+import { useProfile } from '@/entities/github/model/queries';
 
 const About: React.FC<CommonProps> = ({ dataTestId = randomId('page-about') }) => {
-  const { profile } = useContext(GitHubDataContext);
+  const { data: profile } = useProfile();
   return (
     <div className="container flex flex-col rounded overflow-hidden shadow-lg bg-gray-200 md:flex-row transition-all" data-testid={dataTestId}>
       <img src={profile?.avatar_url} alt={`Github Avatar`} className='max-h-32' />

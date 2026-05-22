@@ -1,8 +1,9 @@
-import Icon from '@/components/atoms/Icon';
-import randomId from '../../../utils/randomId';
+import Icon from '@/components/atoms/Icon/index';
+import randomId from '@/shared/utils/randomId';
 import { type CardProps } from './types';
 import React from 'react';
-import mdParser from '../../../utils/mdParser';
+import mdParser from '@/shared/utils/mdParser';
+import { Card as ShadcnCard, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 const Card: React.FC<CardProps> = ({
   dataTestId = randomId('card'),
@@ -10,11 +11,11 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const thumbnail = `https://github.com/mjgargani/${repo?.name}/blob/main/thumbnail.webp?raw=true`
   return (
-    <div className="item max-w-sm rounded overflow-hidden shadow-lg bg-gray-200">
+    <ShadcnCard className="item max-w-sm overflow-hidden bg-gray-200 border-none rounded shadow-lg p-0">
       {repo?.name ? (
         <a
           data-testid={dataTestId}
-          className="card-link"
+          className="card-link block h-full min-h-72"
           href={`${repo.html_url}/#README.md`}
           target="_blank"
           style={{
@@ -23,33 +24,35 @@ const Card: React.FC<CardProps> = ({
           }}
           rel="noreferrer"
         >
-          <div className='flex flex-col h-full min-h-72'>
+          <div className='flex flex-col h-full'>
             <div
-              className='min-h-1/2 bg-cover bg-no-repeat bg-center shadow-lg'
+              className='h-36 bg-cover bg-no-repeat bg-center shadow-lg w-full'
               style={{
-              backgroundImage: `url(${thumbnail})`,
-              userSelect: 'none',
+                backgroundImage: `url(${thumbnail})`,
+                userSelect: 'none',
               }}
               role="img"
               aria-label={`Thumbnail do projeto '${repo.name}'`}
             />
-            <div className='min-h-1/2'>
-              <div className="min-h-1/12 p-3 flex gap-2 justify-center">
+            <CardHeader className="p-3 pb-0 flex flex-col gap-2 items-center">
+              <div className="flex gap-2 justify-center">
                 <Icon i={repo.topics}/>
               </div>
-              <div className="min-h-11/12 px-3 pb-3">
-                <div className="font-bold text-xl mb-2">
-                {repo.name.replace("-"," ").replace("_"," ").toLocaleUpperCase()}
-                </div>
-                {mdParser(repo.description)}
+              <CardTitle className="text-xl font-bold uppercase text-center mt-2">
+                {repo.name.replace("-"," ").replace("_"," ")}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="px-3 pb-3 pt-2">
+              <div className="text-sm">
+                 {mdParser(repo.description)}
               </div>
-            </div>
+            </CardContent>
           </div>
         </a>
       ) : (
         <span className='m-4'><Icon i={"loading"} /></span>
       )}
-    </div>
+    </ShadcnCard>
   );
 };
 

@@ -1,5 +1,5 @@
 import { type CommonProps } from '../../../globals';
-import randomId from '../../../utils/randomId';
+import randomId from '@/shared/utils/randomId';
 import { Container } from './styles';
 
 const GitHubButtons: React.FC<CommonProps> = ({ dataTestId = randomId('github-btns'), styledCss }) => (

@@ -25,3 +25,4 @@ dist-ssr
 
 compress_project.sh
 *.zip
+coverage/

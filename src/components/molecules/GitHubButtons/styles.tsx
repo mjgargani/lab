@@ -1,5 +1,5 @@
 import { type CommonProps } from '../../../globals';
-import { device } from '../../../utils/devices';
+import { device } from '@/shared/utils/devices';
 import styled from 'styled-components';
 
 export const Container = styled.div<CommonProps>`

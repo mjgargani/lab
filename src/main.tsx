@@ -1,14 +1,20 @@
 import { createRoot } from 'react-dom/client'
 import { StrictMode } from 'react'
-import { HashRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { RouterProvider, createHashHistory } from '@tanstack/react-router';
+import { router } from './app/router.tsx';
 
-import './styles/base/main.css'
-import App from './App.tsx'
+import './shared/styles/base/main.css'
+
+const hashHistory = createHashHistory();
+router.update({ history: hashHistory });
+
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </StrictMode>,
 )

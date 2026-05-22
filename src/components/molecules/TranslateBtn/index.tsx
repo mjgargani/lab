@@ -1,5 +1,5 @@
 import { type CommonProps } from '../../../globals';
-import randomId from '../../../utils/randomId';
+import randomId from '@/shared/utils/randomId';
 import Button from '../../atoms/Button';
 import IconReplacer from '../../atoms/Icon';
 import { Container } from './styles';

@@ -1,4 +1,4 @@
-import { device } from './utils/devices';
+import { device } from @/shared/utils/devices';
 import styled from 'styled-components';
 
 type ContainerBaseProps = {

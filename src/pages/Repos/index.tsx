@@ -1,20 +1,22 @@
-import Icon from '@/components/atoms/Icon';
+import Icon from '@/components/atoms/Icon/index';
 import Card from '../../components/molecules/Card';
-import { GitHubDataContext } from '../../context/GitHubData';
-import { type GitHubRepoItem } from '../../context/types';
+import { useRepos } from '@/entities/github/model/queries';
+import { type GitHubRepoItem } from '@/entities/github/model/types';
 import { type CommonProps } from '../../globals';
-import imgLoader from '../../utils/imgLoader';
-import randomId from '../../utils/randomId';
+import imgLoader from '@/shared/utils/imgLoader';
+import randomId from '@/shared/utils/randomId';
 import Filter from '@/components/atoms/Filter';
 import { type FilterItem } from '@/components/atoms/Filter/types';
-import useQuery from '@/hooks/useQuery';
-import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import useQuery from '@/shared/hooks/useQuery';
+import React, { useEffect, useState, useMemo } from 'react';
+import { useNavigate } from '@tanstack/react-router';
+import { filterList } from '@/shared/utils/filterList';
 
 const sortRepos = (a: GitHubRepoItem, b: GitHubRepoItem) => (a.id < b.id ? 1 : -1); // Newer repos first
 
 const Repos: React.FC<CommonProps> = ({ dataTestId = randomId('page-repos') }) => {
-  const { repos, topics } = useContext(GitHubDataContext);
+  const { data: repos } = useRepos();
+  const topics = useMemo(() => repos ? filterList(repos) : [], [repos]);
   const [filteredRepos, setFilteredRepos] = useState<GitHubRepoItem[]>([]);
   const [filters, setFilters] = useState<FilterItem[]>([]);
 
@@ -77,7 +79,8 @@ const Repos: React.FC<CommonProps> = ({ dataTestId = randomId('page-repos') }) =
         ...f, 
         selected: target.checked 
       }));
-      navigate(''); // Clear query params
+      // In @tanstack/react-router, clearing query params correctly
+      navigate({ search: {} });
     } else {
       updatedFilters = filters.map((f) =>
         f.name === target.name ? { ...f, selected: !f.selected } : f,
@@ -88,7 +91,7 @@ const Repos: React.FC<CommonProps> = ({ dataTestId = randomId('page-repos') }) =
         .map((f) => f.name)
         .join('-');
       
-      navigate(selectedTechs ? `?f=${selectedTechs}` : '');
+      navigate({ search: { f: selectedTechs } });
     }
 
     setFilters(updatedFilters);

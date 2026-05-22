@@ -13,17 +13,10 @@ export type GitHubRepoItem = {
   description: string;
   html_url: string;
   homepage: string;
-  topics: string[]; // for filters
+  topics: string[];
 };
 
 export type Topic = {
   recurrence: number;
   name: string;
-};
-
-export type GitHubData = {
-  loading: boolean;
-  profile: GitHubProfile;
-  repos: GitHubRepoItem[];
-  topics: Topic[];
 };

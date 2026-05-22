@@ -1,5 +1,5 @@
 import React from 'react';
-import randomId from '../../../utils/randomId';
+import randomId from '@/shared/utils/randomId';
 import styles from './Frame.module.css';
 
 const FrameShadow: React.FC = () => {
