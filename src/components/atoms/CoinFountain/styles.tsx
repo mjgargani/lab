@@ -1,5 +1,5 @@
-import { type CoinFountainProps } from './types';
-import styled, { keyframes } from 'styled-components';
+import { type CoinFountainProps } from "./types";
+import styled, { keyframes } from "styled-components";
 
 const coinYmovement = (distance: number) => keyframes`
   from{
@@ -49,8 +49,11 @@ export const Coin = styled.div<CoinFountainProps>`
   bottom: 2%;
   left: 1%;
   animation-delay: ${(props) => props.delay ?? 0}ms !important;
-  animation: ${(props) => coinYmovement(props.distance?.[1] ?? 10)} 0.25s alternate ease infinite,
-    ${(props) => coinXmovement(props.distance?.[0] ?? 10)} 1s ease infinite, ${coinOpacity} 1s ease infinite;
+  animation:
+    ${(props) => coinYmovement(props.distance?.[1] ?? 10)} 0.25s alternate ease
+      infinite,
+    ${(props) => coinXmovement(props.distance?.[0] ?? 10)} 1s ease infinite,
+    ${coinOpacity} 1s ease infinite;
 `;
 
 export const MoneyBag = styled.div`

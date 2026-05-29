@@ -1,4 +1,4 @@
-import { GitHubRepoItem, type Topic } from '@/entities/github/model/types';
+import { GitHubRepoItem, type Topic } from "@/entities/github/model/types";
 
 // This function will runs through a list of repository names and extract technology tags
 export function filterList(repos: GitHubRepoItem[]): Topic[] {

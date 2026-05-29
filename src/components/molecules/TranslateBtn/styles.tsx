@@ -1,5 +1,5 @@
-import { type CommonProps } from '../../../globals';
-import styled from 'styled-components';
+import { type CommonProps } from "../../../globals";
+import styled from "styled-components";
 
 export const Container = styled.div<CommonProps>`
   position: fixed;

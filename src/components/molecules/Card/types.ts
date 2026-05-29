@@ -1,5 +1,5 @@
-import { GitHubRepoItem } from '@/context/types';
-import { type CommonProps } from '../../../globals';
+import { GitHubRepoItem } from "@/context/types";
+import { type CommonProps } from "../../../globals";
 
 export type BgImg = {
   source: string;
@@ -10,5 +10,5 @@ export type BgImg = {
 };
 
 export type CardProps = {
-  repo?: GitHubRepoItem
+  repo?: GitHubRepoItem;
 } & CommonProps;

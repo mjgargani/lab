@@ -26,7 +26,6 @@
   }
 }
 
-
 @keyframes fadeInOut {
   from {
     opacity: 0;
@@ -129,11 +128,11 @@
 
 @keyframes potionShining {
   0% {
-    filter: drop-shadow(0 0 50px rgba(255, 255, 255, .75));
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.75));
   }
 
   100% {
-    filter: drop-shadow(0 0 50px rgba(255, 255, 255, .25));
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.25));
   }
 }
 
@@ -146,11 +145,12 @@
 }
 
 .animate-fadeIn {
-  animation: fadeInOut .5s ease forwards;
+  animation: fadeInOut 0.5s ease forwards;
 }
 
 .animate-potion {
-  animation: potionRotate 60s infinite alternate ease-in-out,
+  animation:
+    potionRotate 60s infinite alternate ease-in-out,
     potionMove 120s infinite ease-in-out,
     potionShining 5s infinite alternate ease-in-out;
 }
