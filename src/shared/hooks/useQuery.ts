@@ -1,5 +1,5 @@
-import React from "react";
-import { useLocation } from "@tanstack/react-router";
+import React from 'react';
+import { useLocation } from '@tanstack/react-router';
 
 function useQuery() {
   const { search } = useLocation();

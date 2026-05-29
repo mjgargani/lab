@@ -19,11 +19,7 @@
 }
 
 .frame__shadow {
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 200%
-  );
+  background: radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 200%);
 }
 
 .frame__potion {

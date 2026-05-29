@@ -1,4 +1,4 @@
-import { type CommonProps } from "../../../globals";
+import { type CommonProps } from '../../../globals';
 
 export type FilterItem = {
   selected: boolean;

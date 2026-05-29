@@ -1,9 +1,9 @@
-import * as axios from "axios";
-import * as cheerio from "cheerio";
+import * as axios from 'axios';
+import * as cheerio from 'cheerio';
 
 function getGithubUsernameFromHost(host?: string): string | null {
   const match = host?.match(/^([^.]+)\.github\.io$/);
-  return match ? match[1] : "mjgargani";
+  return match ? match[1] : 'mjgargani';
 }
 
 const username = getGithubUsernameFromHost(window?.location?.host);
@@ -13,7 +13,7 @@ async function getNewEtag(url: string): Promise<string | null> {
   try {
     const response = await axios.head(url);
     const etag = response.headers.etag || null;
-    localStorage.setItem("etag", etag);
+    localStorage.setItem('etag', etag);
     return etag;
   } catch (error: unknown) {
     console.error((error as Error).message);
@@ -27,7 +27,7 @@ async function getHtml(url: string): Promise<string | false> {
     const { data } = response;
     return data as string;
   } catch (error: unknown) {
-    console.error("Erro ao buscar HTML:", error.message);
+    console.error('Erro ao buscar HTML:', error.message);
     return false;
   }
 }
@@ -38,11 +38,8 @@ async function getPinned(): Promise<unknown[]> {
   const $ = cheerio.load(html);
   const pinned: string[] = [];
 
-  $("li.pinned-item-list-item").each((_i, el) => {
-    const repoName = $(el)
-      .find("div.pinned-item-list-item-content span.repo")
-      .text()
-      .trim();
+  $('li.pinned-item-list-item').each((_i, el) => {
+    const repoName = $(el).find('div.pinned-item-list-item-content span.repo').text().trim();
     pinned.push(repoName);
   });
 
@@ -50,20 +47,20 @@ async function getPinned(): Promise<unknown[]> {
 }
 
 async function getEtagCache(url: string): Promise<boolean> {
-  const localEtag = localStorage.getItem("etag");
+  const localEtag = localStorage.getItem('etag');
   const remoteEtag = await getNewEtag(url);
   return localEtag === remoteEtag;
 }
 
 function getRepoCache(): unknown[] {
-  const localCache = localStorage.getItem("repositories");
+  const localCache = localStorage.getItem('repositories');
   if (!localCache) return [];
   return JSON.parse(localCache);
 }
 
 export async function getRepositories(): Promise<unknown[]> {
   if (await getEtagCache(github)) {
-    return getRepoCache();
+    return getRepoCache()
   }
 
   const reposUrl = `${github}?tab=repositories`;
@@ -73,17 +70,12 @@ export async function getRepositories(): Promise<unknown[]> {
   const repositories: unknown[] = [];
   const pinned = await getPinned();
 
-  $("li.public").each((_i, el) => {
+  $('li.public').each((_i, el) => {
     const item = $(el);
-    const repoName = item
-      .find('a[itemprop="name codeRepository"]')
-      .text()
-      .trim();
-    const repoLink = item
-      .find('a[itemprop="name codeRepository"]')
-      .attr("href");
+    const repoName = item.find('a[itemprop="name codeRepository"]').text().trim();
+    const repoLink = item.find('a[itemprop="name codeRepository"]').attr('href');
     const description = item.find('p[itemprop="description"]').text().trim();
-    const updated = item.find("relative-time").attr("datetime");
+    const updated = item.find('relative-time').attr('datetime');
     repositories.push({
       name: repoName,
       pinned: pinned.includes(repoName),
@@ -95,19 +87,17 @@ export async function getRepositories(): Promise<unknown[]> {
     });
   });
 
-  localStorage.setItem("repositories", JSON.stringify(repositories));
+  localStorage.setItem('repositories', JSON.stringify(repositories));
 
   return repositories;
 }
 
 export async function getRepositoriesOrdered(): Promise<unknown[]> {
   const repositories = await getRepositories();
-  return repositories.sort(
-    (a: Record<string, unknown>, b: Record<string, unknown>) => {
-      if (a.pinned && !b.pinned) return -1;
-      if (!a.pinned && b.pinned) return 1;
-      if (a.updated && b.updated) return b.updated.localeCompare(a.updated);
-      return 0;
-    },
-  );
+  return repositories.sort((a: Record<string, unknown>, b: Record<string, unknown>) => {
+    if (a.pinned && !b.pinned) return -1;
+    if (!a.pinned && b.pinned) return 1;
+    if (a.updated && b.updated) return b.updated.localeCompare(a.updated);
+    return 0;
+  });
 }

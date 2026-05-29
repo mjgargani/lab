@@ -1,5 +1,5 @@
 async function imgLoader(sources: string[]) {
-  if (["test"].includes(import.meta.env.MODE)) return Promise.resolve(true);
+  if (['test'].includes(import.meta.env.MODE)) return Promise.resolve(true);
 
   const promises: Array<Promise<Array<string | boolean>>> = [];
 
